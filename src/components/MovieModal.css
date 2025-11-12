@@ -1,0 +1,103 @@
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 300;
+  padding: 20px;
+}
+
+.modal {
+  width: 100%;
+  max-width: 950px;
+  background: var(--dark-surface);
+  border-radius: 12px;
+  color: var(--dark-text);
+  padding: 18px;
+  position: relative;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.6);
+  overflow: auto;
+}
+
+.modal-close {
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  background: transparent;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.modal-inner {
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+}
+
+.modal-poster {
+  width: 260px;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 8px 26px rgba(0,0,0,0.45);
+}
+
+.modal-body {
+  flex: 1;
+}
+
+.meta-line {
+  color: #cfcfcf;
+  margin-top: 4px;
+  margin-bottom: 8px;
+}
+
+.plot {
+  margin-top: 8px;
+  line-height: 1.4;
+}
+
+/* actions */
+.modal-actions {
+  margin-top: 12px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.action-fav {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+.action-fav.add { background: #ffcc00; color: #000; }
+.action-fav.remove { background: #ff4444; color: #fff; }
+
+.action-trailer {
+  background: transparent;
+  border: 2px solid #007bff;
+  padding: 8px 12px;
+  border-radius: 8px;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* similar */
+.similar-title { margin-top: 18px; color: var(--accent); }
+.similar-grid {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+.similar-card {
+  width: 100px;
+  text-align: center;
+  cursor: pointer;
+}
+.similar-card img { width: 100%; height: 140px; object-fit: cover; border-radius: 6px; }
+.similar-card p { font-size: 0.78rem; margin: 6px 0 0; color: #ddd; }

@@ -1,0 +1,101 @@
+/* Navbar.css */
+.navbar {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 20px;
+  background: var(--dark-surface);
+  color: var(--dark-text);
+  position: sticky;
+  top: 0;
+  z-index: 120;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+
+.navbar.light {
+  background: var(--light-surface);
+  color: var(--light-text);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-right: 12px;
+  color: var(--accent-2);
+}
+
+.nav-links {
+  display: flex;
+  gap: 12px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex: 1;
+}
+
+.nav-links li {
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #cfcfcf;
+  font-weight: 600;
+  transition: all 0.15s;
+}
+
+.nav-links li:hover {
+  background: rgba(255,255,255,0.03);
+  color: white;
+  transform: translateY(-2px);
+}
+
+.nav-links li.active {
+  background: var(--accent);
+  color: white;
+  box-shadow: 0 6px 18px rgba(255,76,41,0.12);
+}
+
+.nav-search {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  background: rgba(255,255,255,0.03);
+  padding: 6px;
+  border-radius: 20px;
+}
+
+.nav-search input {
+  border: none;
+  outline: none;
+  padding: 8px 10px;
+  background: transparent;
+  color: inherit;
+  width: 220px;
+}
+
+.nav-search button {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  padding: 8px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.theme-toggle {
+  margin-left: 12px;
+  background: transparent;
+  border: 2px solid var(--accent-2);
+  border-radius: 8px;
+  padding: 6px 8px;
+  color: var(--accent-2);
+  cursor: pointer;
+}
+
+
+@media (max-width: 700px) {
+  .nav-search input {
+    width: 120px;
+  }
+  .nav-links { display: none; } 
+}

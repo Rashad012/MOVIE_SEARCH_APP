@@ -1,0 +1,48 @@
+:root {
+  --accent: #ff4c29;
+  --accent-2: #00bcd4;
+  --dark-bg: #0d0d0d;
+  --dark-surface: #1c1c1c;
+  --dark-text: #f5f5f5;
+  --light-bg: #f5f5f5;
+  --light-surface: #ffffff;
+  --light-text: #111;
+}
+
+
+.app {
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.app.dark {
+  background: var(--dark-bg);
+  color: var(--dark-text);
+}
+
+.app.light {
+  background: var(--light-bg);
+  color: var(--light-text);
+}
+
+.main-content {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+.status-text,
+.no-results {
+  text-align: center;
+  font-size: 1.05rem;
+  margin-top: 40px;
+  color: #bbb;
+}
+
+
+@media (max-width: 768px) {
+  .main-content {
+    padding: 12px;
+  }
+}
